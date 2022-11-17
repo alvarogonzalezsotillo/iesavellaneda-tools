@@ -17,3 +17,8 @@ jobs:
     - name: Construir el paquete DEB
       run: ./build.sh
 
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+          name: iesavellaneda-tools.deb
+          path: iesavellaneda-tools.deb
