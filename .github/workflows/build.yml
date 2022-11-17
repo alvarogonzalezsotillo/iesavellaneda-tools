@@ -24,7 +24,7 @@ jobs:
           path: iesavellaneda-tools.deb
 
     - name: Crear la release
-      uses: actions/create-release@v1
+      uses: actions/create-release@v2
       id: create_release
       with:
         draft: false
