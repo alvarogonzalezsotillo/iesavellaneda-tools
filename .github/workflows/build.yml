@@ -24,22 +24,7 @@ jobs:
           path: iesavellaneda-tools.deb
 
     - name: Crear la release
-      uses: actions/create-release@v2
+      uses: ncipollo/release-action@v1
       id: create_release
       with:
-        draft: false
-        prerelease: false
-        release_name: ${{ steps.version.outputs.version }}
-        tag_name: ${{ github.ref }}
-      env:
-        GITHUB_TOKEN: ${{ github.token }}      
-
-    - name: Subir el DEB a la release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: iesavellaneda-tools.deb
-        asset_name: iesavellaneda-tools.deb
-        asset_content_type: application/vnd.debian.binary-package
+          artifacts: "iesavellaneda-tools.deb"
