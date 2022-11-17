@@ -1,0 +1,10 @@
+Package: iesavellaneda-tools
+Version: 2022.11.17.11.20
+Section: base 
+Priority: optional 
+Architecture: all
+Homepage: https://github.com/alvarogonzalezsotillo/iesavellaneda-tools
+Depends: libnotify-bin
+Recommends: epoptes-client, tmux, tcpdump, git, htop, sshfs 
+Maintainer: alvaro.gonzalezsotillo@educa.madrid.org
+Description: Cosas que les ponemos a los ordenadores con linux en el IES Alonso de Avellaneda
