@@ -18,7 +18,7 @@ jobs:
       run: ./build.sh
 
     - name: Upload APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
           name: iesavellaneda-tools.deb
           path: iesavellaneda-tools.deb
