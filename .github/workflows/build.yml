@@ -24,7 +24,6 @@ jobs:
           path: iesavellaneda-tools.deb
 
     - name: Crear la release
-      uses: ncipollo/release-action@v1
-      id: create_release
+      uses: softprops/action-gh-release@v1
       with:
-          artifacts: "iesavellaneda-tools.deb"
+          files: iesavellaneda-tools.deb
