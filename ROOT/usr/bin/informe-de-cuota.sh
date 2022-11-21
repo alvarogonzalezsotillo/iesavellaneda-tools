@@ -1,15 +1,44 @@
 #!/bin/bash
+
+dialogo(){
+
+    local MSG="$*"
+    
+    if which zenity
+    then
+        zenity --info --title "Aviso de cuota" --text "$MSG"
+        return 0
+    fi
+
+    if which kdialog
+    then
+        kdialog --title Aviso de cuota --msgbox "$MSG"
+        return 0
+    fi
+
+    return 1
+}
+
+
 IFS="\n" quota | tail -n +3 | awk '{print $2 " " $4 " " $1}' | while read LINEA
 do
+    LINEA=$(echo "$LINEA" | tr -d '*')
     read USADO MAXIMO DISCO < <(echo "$LINEA")
 
-    PORCENTAJE=$((100*USADO/MAXIMO))
+    echo "Usado-maximo-disco:" $USADO $MAXIMO $DISCO
 
-    MSG="Se han usado  $USADO KB de un máximo de $MAXIMO KB ($PORCENTAJE %) del disco  $DISCO"
-
-    echo "$MSG"
-    if [ $PORCENTAJE -gt 80 ]
+    if [ $MAXIMO -gt 0 ]
     then
-        notify-send --category=Aviso "Aviso de cuota" "$MSG"  > /dev/null 2> /dev/null
+
+        PORCENTAJE=$((100*USADO/MAXIMO))
+
+        MSG="Se han usado  $USADO KB de un máximo de $MAXIMO KB ($PORCENTAJE %) del disco  $DISCO"
+        notify-send --category=Aviso "$MSG"  > /dev/null 2> /dev/null
+
+        echo "$MSG"
+        if [ $PORCENTAJE -gt 80 ]
+        then
+            dialogo "$MSG"
+        fi
     fi
 done 
