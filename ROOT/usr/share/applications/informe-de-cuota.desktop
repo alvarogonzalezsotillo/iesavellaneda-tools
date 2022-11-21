@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Informe de cuota
 Comment=Muestra un informe de la cuota del usuario como una notificación
-Exec=informe-de-cuota-notify.sh
+Exec=informe-de-cuota.sh
 Icon=informe-de-cuota
 Terminal=false
 Type=Application
