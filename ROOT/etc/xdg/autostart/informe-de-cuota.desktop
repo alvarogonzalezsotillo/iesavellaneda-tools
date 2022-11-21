@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=Informe de cuota
 Name[en]=Quota report 
-Exec=/usr/bin/informe-de-cuota.sh
+Exec=/usr/bin/informe-de-cuota-notify-loop.sh
 Terminal=false
 Type=Application
+Icon=informe-de-cuota
 Categories=Settings;System;
 
