@@ -31,6 +31,11 @@ then
 fi
 
 USUARIO=$(whiptail --inputbox "Usuario para conectarse (root o con sudo sin contraseña):" 10 30 profesor 3>&1 1>&2 2>&3)
+if [ $? -ne 0 ]
+then
+    echo Instalación cancelada
+    exit 1
+fi
 
 mkdir -p outdir
 echo "--------"
