@@ -5,6 +5,10 @@
 Puede bajarse el fichero =deb= de la página de [[https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases][/releases/]] e instalarse con =dpkg -i iesavellaneda-tools.deb=.
 
 * Instalación automática
+Se ha creado un /script/ para instalar en los ordenadores de los alumnos usando [[https://github.com/lilydjwg/pssh][=pssh=]]
+
+Es necesario tener un usuario que pueda hacer =sudo= sin contraseña, o poder usar /root/ como usuario de /ssh/
+
 #+begin_src shell
 curl -s https://raw.githubusercontent.com/alvarogonzalezsotillo/iesavellaneda-tools/master/instalar-en-ordenadores-de-alumnos.sh | bash
 #+end_src
