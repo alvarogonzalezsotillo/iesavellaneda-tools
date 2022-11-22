@@ -1,0 +1,13 @@
+
+
+* Instalación
+
+Puede bajarse el fichero =deb= de la página de [[https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases][/releases/]] e instalarse con =dpkg -i iesavellaneda-tools.deb=.
+
+* Instalación automática
+#+begin_src shell
+curl -s https://raw.githubusercontent.com/alvarogonzalezsotillo/iesavellaneda-tools/master/instalar-en-ordenadores-de-alumnos.sh | bash
+#+end_src
+
+#+RESULTS:
+
