@@ -37,7 +37,6 @@ then
     exit 1
 fi
 
-mkdir -p outdir
 echo "--------"
 echo "--------"
 echo Se solicitará la contraseña del usuario $USUARIO en los ordenadores de los alumnos
@@ -48,6 +47,7 @@ fi
 echo "--------"
 echo "--------"
 
+mkdir -p outdir
 parallel-ssh --hosts <(nombres_de_ordenadores_de_alumno $AULA) --timeout 10 --askpass --user $USUARIO --errdir outdir --outdir outdir --extra-args "-o StrictHostKeyChecking=no" "wget -O iesavellaneda-tools.deb $DEB_URL; sudo dpkg -i iesavellaneda-tools.deb; rm iesavellaneda-tools.deb" 
 
 echo "--------"
