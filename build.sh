@@ -1,4 +1,6 @@
 #!/bin/bash
 DATE=$(date +%Y.%m.%d.%H.%M)
-sed -i "s/Version:.*/Version: $DATE/g" ./ROOT/DEBIAN/control
+VERSION="$DATE-$(hostname)"
+echo "Versión creada: $VERSION"
+sed -i "s/Version:.*/Version: $VERSION/g" ./ROOT/DEBIAN/control
 dpkg-deb --root-owner-group --build ROOT iesavellaneda-tools.deb
