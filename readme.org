@@ -1,6 +1,8 @@
 
 
+#+html: <p align="center">
 [[file:ROOT/usr/share/pixmaps/informe-de-cuota.png]]
+#+html: </p>
 
 
 Este paquete =deb= instala en los ordenadores del IES Alonso de Avellaneda. Incluye algunas dependencias a paquetes de Ubuntu y diversas utilidades
