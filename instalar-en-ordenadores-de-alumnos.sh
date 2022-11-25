@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=error-en-el-desktop
+TAG=mejor-mensaje-porcentaje
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
