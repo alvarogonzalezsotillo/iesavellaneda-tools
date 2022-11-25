@@ -4,17 +4,19 @@ dialogo(){
 
     local MSG="$*"
     
-    if which zenity
-    then
-        zenity --info --title "Aviso de cuota" --text "$MSG"
-        return 0
-    fi
 
     if which kdialog
     then
         kdialog --title Aviso de cuota --msgbox "$MSG"
         return 0
     fi
+
+    if which zenity
+    then
+        zenity --info --title "Aviso de cuota" --text "$MSG"
+        return 0
+    fi
+
 
     return 1
 }
@@ -32,7 +34,7 @@ do
 
         PORCENTAJE=$((100*USADO/MAXIMO))
 
-        MSG="Se han usado  $USADO KB de un máximo de $MAXIMO KB ($PORCENTAJE %) del disco  $DISCO"
+        MSG="$PORCENTAJE del disco $DISCO ya utilizado ($USADO KB de un máximo de $MAXIMO $KB)"
         notify-send --category=Aviso "$MSG"  > /dev/null 2> /dev/null
 
         echo "$MSG"

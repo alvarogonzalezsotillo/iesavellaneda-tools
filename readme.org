@@ -1,5 +1,11 @@
 
 
+[[file:ROOT/usr/share/pixmaps/informe-de-cuota.png]]
+
+
+Este paquete =deb= instala en los ordenadores del IES Alonso de Avellaneda. Incluye algunas dependencias a paquetes de Ubuntu y diversas utilidades
+- [[file:ROOT/usr/bin/informe-de-cuota.sh][informe-de-cuota.sh]]: Avisa de la cuota gastada, y muestra un diálogo al sobrepasar el 80% de la misma.
+
 * Instalación
 
 Puede bajarse el fichero =deb= de la página de [[https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases][releases]] e instalarse con =dpkg -i iesavellaneda-tools.deb=.
