@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=tag-con-iconos
+TAG=error-en-el-desktop
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
