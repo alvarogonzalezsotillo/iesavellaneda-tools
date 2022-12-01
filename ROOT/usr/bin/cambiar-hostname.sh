@@ -1,6 +1,10 @@
 #!/bin/bash
 
-if [ ! -n "$1" ] ; then
+set -o pipefail
+set -u
+set -e
+
+if [ "${1:-}" == "" ] ; then
 	echo 'Missing argument: new_hostname'
 	exit 1
 fi
@@ -12,8 +16,8 @@ NEW_HOSTNAME=$1
 echo "The current hostname is $CUR_HOSTNAME"
 
 # Change the hostname
-hostnamectl set-hostname $NEW_HOSTNAME
-hostname $NEW_HOSTNAME
+sudo hostnamectl set-hostname $NEW_HOSTNAME
+sudo hostname $NEW_HOSTNAME
 
 # Change hostname in /etc/hosts & /etc/hostname
 sudo sed -i "s/$CUR_HOSTNAME/$NEW_HOSTNAME/g" /etc/hosts
