@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=tag-mejor-mensaje-porcentaje
+TAG=tag-cambiar-nombre-con-dialogo
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
