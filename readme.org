@@ -5,7 +5,9 @@
 
 Este paquete =deb= instala en los ordenadores del IES Alonso de Avellaneda. Incluye algunas dependencias a paquetes de Ubuntu y diversas utilidades
 - [[file:ROOT/usr/bin/informe-de-cuota.sh][informe-de-cuota.sh]]: Avisa de la cuota gastada, y muestra un diálogo al sobrepasar el 80% de la misma.
-
+- [[file:ROOT/usr/bin/informe-de-cuota-loop.sh][informe-de-cuota-loop.sh]]: Ejecuta el informe de cuota automáticamente cada horas
+- [[file:ROOT/usr/bin/cambiar-hostname.sh][cambiar-hostname.sh]]: Cambia el /hostname/, actualizando =/etc/hostname= y =/etc/hosts=
+  
 * Instalación
 
 Puede bajarse el fichero =deb= de la página de [[https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases][releases]] e instalarse con =dpkg -i iesavellaneda-tools.deb=.

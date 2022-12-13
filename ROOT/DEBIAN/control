@@ -4,7 +4,7 @@ Section: base
 Priority: optional 
 Architecture: all
 Homepage: https://github.com/alvarogonzalezsotillo/iesavellaneda-tools
-Depends: libnotify-bin, sudo, zenity
-Recommends: epoptes-client, tmux, tcpdump, git, htop, sshfs 
+Depends: libnotify-bin, sudo, zenity, tmux, tcpdump, git, htop, sshfs, epoptest-client
+Recommends: kdialog, zsh, gromit-mpx, openboard, pssh
 Maintainer: alvaro.gonzalezsotillo@educa.madrid.org
 Description: Cosas que les ponemos a los ordenadores con linux en el IES Alonso de Avellaneda
