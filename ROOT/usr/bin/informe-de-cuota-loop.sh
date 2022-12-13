@@ -2,5 +2,5 @@
 while true
 do
     informe-de-cuota.sh
-    sleep 1m
+    sleep 1h
 done;

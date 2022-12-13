@@ -35,7 +35,7 @@ do
 
         PORCENTAJE=$((100*USADO/MAXIMO))
 
-        MSG="$PORCENTAJE del disco $DISCO ya utilizado ($USADO KB de un máximo de $MAXIMO $KB)"
+        MSG="${PORCENTAJE}% del disco $DISCO ya utilizado ($USADO KB de un máximo de $MAXIMO $KB)"
         notify-send --category=Aviso "$MSG"  > /dev/null 2> /dev/null
 
         echo "$MSG"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=tag-cambiar-nombre-con-dialogo
+TAG=tag-1hora-con-porcentaje
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
