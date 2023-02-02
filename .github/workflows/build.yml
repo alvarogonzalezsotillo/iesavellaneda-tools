@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Construir DB y crear release
 
 on:
   push:
@@ -22,11 +22,11 @@ jobs:
     - name: Subir el DEB a la acción de Github
       uses: actions/upload-artifact@v3
       with:
-          name: iesavellaneda-tools.deb
-          path: iesavellaneda-tools.deb
+        name: iesavellaneda-tools.deb
+        path: iesavellaneda-tools.deb
 
     - name: Crear la release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-          files: iesavellaneda-tools.deb
+        files: iesavellaneda-tools.deb
