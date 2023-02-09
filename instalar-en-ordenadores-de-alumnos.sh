@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=tag-1hora-con-porcentaje
+TAG=tag-logo
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
