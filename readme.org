@@ -7,6 +7,7 @@ Este paquete =deb= instala en los ordenadores del IES Alonso de Avellaneda. Incl
 - [[file:ROOT/usr/bin/informe-de-cuota.sh][informe-de-cuota.sh]]: Avisa de la cuota gastada, y muestra un diálogo al sobrepasar el 80% de la misma.
 - [[file:ROOT/usr/bin/informe-de-cuota-loop.sh][informe-de-cuota-loop.sh]]: Ejecuta el informe de cuota automáticamente cada horas
 - [[file:ROOT/usr/bin/cambiar-hostname.sh][cambiar-hostname.sh]]: Cambia el /hostname/, actualizando =/etc/hostname= y =/etc/hosts=
+- [[file:ROOT/usr/bin/instalar-mensaje-de-login.sh][instalar-mensaje-de-login.sh]]: Define un /banner/ y un logo en la pantalla de inicio de =gdm3=.
 
 * Instalación
 
