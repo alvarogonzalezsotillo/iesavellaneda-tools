@@ -21,9 +21,9 @@ uninstall_logo(){
 }
 
 install_logo(){
-    crudini --verbose --set "$GREETERCONF" "org/gnome/login-screen" "banner-message-enable" "true"
-    crudini --verbose --set "$GREETERCONF" "org/gnome/login-screen" "banner-message-text" 'Este ordenador se pone disposición de los alumnos por parte del IES Alonso de Avellaneda. Está sujeto a las condiciones de uso generales del aula y particulares de cada clase y profesor. Su uso está destinado exclusivamente a tareas académicas.\n\nCon el fin de garantizar su uso correcto y conservación, el personal del instituto podrá monitorizar las actividades realizadas en este ordenador, así como acceder a la información guardada y modificarla en caso necesario.'
-    crudini --verbose --set "$GREETERCONF" "org/gnome/login-screen" "logo" "/usr/share/pixmaps/logo-iesavellaneda.png"
+    crudini --set "$GREETERCONF" "org/gnome/login-screen" "banner-message-enable" "true"
+    crudini --set "$GREETERCONF" "org/gnome/login-screen" "banner-message-text" "'Este ordenador se pone disposición de los alumnos por parte del IES Alonso de Avellaneda. Está sujeto a las condiciones de uso generales del aula y particulares de cada clase y profesor. Su uso está destinado exclusivamente a tareas académicas.\n\nCon el fin de garantizar su uso correcto y conservación, el personal del instituto podrá monitorizar las actividades realizadas en este ordenador, así como acceder a la información guardada y modificarla en caso necesario.'"
+    crudini --set "$GREETERCONF" "org/gnome/login-screen" "logo" "'/usr/share/pixmaps/logo-iesavellaneda.png'"
 }
 
 if [ "$1" = "-u" ]
