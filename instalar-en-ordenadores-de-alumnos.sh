@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=tag-logo-comilla-simple
+TAG=tag-instalar-logo-sin-comprobar
 DEB_URL=https://github.com/alvarogonzalezsotillo/iesavellaneda-tools/releases/download/$TAG/iesavellaneda-tools.deb
 AULA_DEFECTO=a33
 
@@ -48,7 +48,7 @@ echo "--------"
 echo "--------"
 
 mkdir -p outdir
-parallel-ssh --hosts <(nombres_de_ordenadores_de_alumno $AULA) --timeout 10 --askpass --user $USUARIO --errdir outdir --outdir outdir --extra-args "-o StrictHostKeyChecking=no" "wget -O iesavellaneda-tools.deb $DEB_URL; sudo dpkg -i iesavellaneda-tools.deb; rm iesavellaneda-tools.deb" 
+parallel-ssh --hosts <(nombres_de_ordenadores_de_alumno $AULA) --timeout 10 --askpass --user $USUARIO --errdir outdir --outdir outdir --extra-args "-o StrictHostKeyChecking=no" "wget -O iesavellaneda-tools.deb $DEB_URL; sudo apt install ./iesavellaneda-tools.deb; rm iesavellaneda-tools.deb" 
 
 echo "--------"
 echo "--------"

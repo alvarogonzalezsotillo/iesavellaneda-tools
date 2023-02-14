@@ -38,16 +38,11 @@ then
 fi
 
 
-if check_logo_installed
+if install_logo
 then
-    echo "El logotipo ya está instalado"
+    echo "Logotipo instalado en $GREETERCONF"
 else
-    if install_logo
-    then
-        echo "Logotipo instalado en $GREETERCONF"
-    else
-        echo "Error instalando logotipo (¿sudo?)"
-    fi
+    echo "Error instalando logotipo (¿sudo?)"
 fi
     
 
