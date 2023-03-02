@@ -48,7 +48,7 @@ echo "--------"
 echo "--------"
 
 mkdir -p outdir
-parallel-ssh --hosts <(nombres_de_ordenadores_de_alumno $AULA) --timeout 10 --askpass --user $USUARIO --errdir outdir --outdir outdir --extra-args "-o StrictHostKeyChecking=no" "wget -O iesavellaneda-tools.deb $DEB_URL; sudo apt install ./iesavellaneda-tools.deb; rm iesavellaneda-tools.deb" 
+parallel-ssh --hosts <(nombres_de_ordenadores_de_alumno $AULA) --timeout 20 --askpass --user $USUARIO --errdir outdir --outdir outdir --extra-args "-o StrictHostKeyChecking=no" "wget -O iesavellaneda-tools.deb $DEB_URL; sudo apt install ./iesavellaneda-tools.deb; rm iesavellaneda-tools.deb" 
 
 echo "--------"
 echo "--------"
