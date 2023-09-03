@@ -23,7 +23,7 @@ dialogo(){
 }
 
 
-IFS="\n" quota | tail -n +3 | awk '{print $2 " " $4 " " $1}' | while read LINEA
+IFS=$'\n' quota | tail -n +3 | awk '{print $2 " " $4 " " $1}' | while read LINEA
 do
     LINEA=$(echo "$LINEA" | tr -d '*')
     read USADO MAXIMO DISCO < <(echo "$LINEA")
@@ -35,7 +35,7 @@ do
 
         PORCENTAJE=$((100*USADO/MAXIMO))
 
-        MSG="${PORCENTAJE}% del disco $DISCO ya utilizado ($USADO KB de un máximo de $MAXIMO $KB)"
+        MSG="${PORCENTAJE}% de la cuota en $DISCO ya utilizado ($USADO KB de un máximo de $MAXIMO $KB)"
         notify-send --category=Aviso "$MSG"  > /dev/null 2> /dev/null
 
         echo "$MSG"
